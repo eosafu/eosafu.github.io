@@ -1,115 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <title>Osafu A. Egbon | Professional Portfolio</title>
-    </head>
-    <body>
-        <!-- Header -->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Osafu A. Egbon</a>
-                </div>
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">Biography</a></li>
-                        <li class="nav__item"><a href="#publications" class="nav__link">Publications</a></li>
-                        <li class="nav__item"><a href="#projects" class="nav__link">Current Projects</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osafu Augustine Egbon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-top: 20px;
+        }
+        .pub-year {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .pub-item {
+            margin-bottom: 10px;
+        }
+        .filter-btn {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('.filter-btn').click(function() {
+                var year = $(this).data('year');
+                if (year === 'all') {
+                    $('.pub-item').show();
+                } else {
+                    $('.pub-item').hide();
+                    $('.pub-' + year).show();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Osafu Augustine Egbon</a>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#about">About</a>
+              <a class="nav-item nav-link" href="#interest">Research Intrest</a>
+                <a class="nav-item nav-link" href="#publications">Publications</a>
+                <a class="nav-item nav-link" href="#research">Research</a>
+                <a class="nav-item nav-link" href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p>Dr. Osafu Augustine Egbon is a computational biologist specializing in spatial statistical models and machine learning applications in biomedical research.</p>
+        </section>
+      <section id="interest" class="section">
+            <h2>Research Intrest</h2>
+            <p>Dr. Osafu Augustine Egbon is a computational biologist specializing in spatial statistical models and machine learning applications in biomedical research.</p>
+        </section>
         
-        <main class="l-main">
-            <!-- Home Section -->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Welcome to<br> <span class="home__title-color">Osafu A. Egbon's</span> Portfolio</h1>
-                    <p>Explore my research, publications, and current projects.</p>
-                    <a href="https://scholar.google.com.br/citations?hl=en&user=sXkgQzMAAAAJ">Google Scholar</a> |
-                    <a href="https://www.researchgate.net/profile/Osafu-Egbon">ResearchGate</a> |
-                    <a href="https://github.com/eosafu">GitHub</a>
-                </div>
-            </section>
-            
-            <!-- Biography Section -->
-            <section class="about section" id="about">
-                <h2 class="section-title">Biography</h2>
-                <div class="about__container bd-grid">
-                    <div>
-                        <h2 class="about__subtitle">Osafu Augustine Egbon, PhD</h2>
-                        <p class="about__text">Dr. Osafu A. Egbon is a computational scientist specializing in spatial statistical modeling, machine learning, and biological network integration. His research focuses on spatial transcriptomics and health disparities.</p>
-                        <a href="https://www.overleaf.com/read/csspdmhhpqmp">View CV</a>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Publications Section -->
-            <section class="publications section" id="publications">
-                <h2 class="section-title">Selected Publications</h2>
-                <h3>Published</h3>
-                <ul>
-                  <li>Gayawan, E. & Egbon, O. A. (2024). Bayesian multinomial model with inference based on Pólya-Gamma augmentation. <i>Biostatistics & Epidemiology</i>. <a href="https://doi.org/10.1080/24709360.2024.2398317">DOI</a></li>
-        <li>Egbon, O. A., Heumann, C., Nascimento, D. C., & Louzada, F. (2024). Mixtures of Dirichlet processes for joint spatial modelling of transcranial magnetic stimulation mapping data. <i>Journal of the Royal Statistical Society Series C: Applied Statistics</i>. <a href="https://doi.org/10.1093/jrsssc/qlae042">DOI</a></li>
-        <li>Egbon, O. A., Belachew, A. M., Bogoni, M. A., Babalola, B. T., & Louzada, F. (2024). Bayesian spatio-temporal statistical modeling of violent-related fatality in western and central Africa. <i>Spatial Statistics</i>, 60, 100828. <a href="https://doi.org/10.1016/j.spasta.2024.100828">DOI</a></li>
-        <li>Gayawan, E., Cameron, E., Okitika, T., Egbon, O. A., & Gething, P. (2024). A situational assessment of treatments received for childhood diarrhea in the Federal Republic of Nigeria. <i>Plos One</i>, 19(5), e0303963. <a href="https://doi.org/10.1371/journal.pone.0303963">DOI</a></li>
-        <li>Ramos, P. L., Jerez-Lillo, N., Segovia, F. A., Egbon, O. A., & Louzada, F. (2024). Power-law distribution in pieces: a semi-parametric approach with change point detection. <i>Statistics and Computing</i>, 34(1), 16. <a href="https://doi.org/10.1007/s11222-023-10336-x">DOI</a></li>
-        <li>Gayawan, E. & Egbon, O. A. (2023). Spatio-temporal mapping of stunting and wasting in Nigerian children: A bivariate mixture modeling. <i>Spatial Statistics</i>. <a href="https://doi.org/10.1016/j.spasta.2023.100785">DOI</a></li>
-        <li>Egbon, O. A., Nascimento, D., & Louzada, F. (2023). Prior elicitation for Gaussian spatial process: An application to TMS brain mapping. <i>Statistics in Medicine</i>. <a href="https://doi.org/10.1002/sim.9842">DOI</a></li>
-        <li>Gayawan, E., Egbon, O. A., & Adegboye, O. (2023). Copula based trivariate spatial modelling of childhood illnesses in Western African countries. <i>Spatial and Spatio-temporal Epidemiology</i>. <a href="https://doi.org/10.1016/j.sste.2023.100591">DOI</a></li>
-        <li>Egbon, O. A. & Gayawan, E. (2023). Modelling the spatial patterns of antenatal care utilization in Nigeria with inference based on Pólya-Gamma mixtures. <i>Journal of Applied Statistics</i>. <a href="https://doi.org/10.1080/02664763.2022.2164561">DOI</a></li>
-        <li>Egbon, O. A., Bogoni, M. A., Babalola, B. T., & Louzada, F. (2022). Under age five children survival times in Nigeria: a Bayesian spatial modeling approach. <i>BMC Public Health</i>, 22(1). <a href="https://doi.org/10.1080/02664763.2022.2164561">DOI</a></li>
-        <li>Egbon, O. A., Belachew, A. M., & Bogoni, M. A. (2022). Modeling spatial pattern of anemia and malnutrition co-occurrence among under-five children in Ethiopia: A Bayesian geostatistical approach. <i>Spatial and Spatio-temporal Epidemiology</i>, 43. <a href="https://doi.org/10.1016/j.sste.2022.100533">DOI</a></li>
-        <li>Babalola, B. T., Ogunsakin, R. E., Egbon, O. A., & Adeleke, A. R. (2022). A Simulation Based Comparative Study of Some Tests for Checking Homogeneity of Non-Crossing Survival Curves Under High Censoring Rates. <i>Journal of Applied Probability and Statistics</i>, 17, 87-99.</li>
-        <li>Egbon, O. A., Belachew, A. M., & Bogoni, M. A. (2022). Risk factors of concurrent malnutrition among children in Ethiopia: a bivariate spatial modeling approach. <i>All Life</i>, 15(1), 512-536. <a href="https://doi.org/10.1080/26895293.2022.2067251">DOI</a></li>
-        <li>Gayawan, E., Egbon, O. A., & Adebayo, S. B. (2022). Spatial modelling of the joint burden of malaria and anaemia co-morbidity in children: A Bayesian geoadditive perspective. <i>Communications in Statistics: Case Studies, Data Analysis and Applications</i>, 8(2), 264-281. <a href="https://doi.org/10.1080/23737484.2022.2031345">DOI</a></li>
-        <li>Saire, J. E. C., Egbon, O. A., & Belachew, A. M. (2021). Social Network Analysis to Surveillance the Impact of Covid-19 in the African continent. <i>International Conference on Electrical, Computer and Energy Technologies (ICECET)</i>, IEEE.</li>
-        <li>Louzada, F., Nascimento, D. C. D., & Egbon, O. A. (2021). Spatial Statistical Models: An Overview under the Bayesian Approach. <i>Axioms</i>, 10(4), 307. <a href="https://doi.org/10.3390/axioms10040307">DOI</a></li>
-        <li>Egbon, O. A., Somo-Aina, O., & Gayawan, E. (2021). Spatial Weighted Analysis of Malnutrition Among Children in Nigeria: A Bayesian Approach. <i>Statistics in Biosciences</i>, 13(3), 495-523. <a href="https://doi.org/10.1007/s12561-021-09303-9">DOI</a></li>
-                </ul>
-                <h3>In Progress</h3>
-                <p>Ongoing research articles under peer review.</p>
-            </section>
-            
-            <!-- Current Projects Section -->
-            <section class="projects section" id="projects">
-                <h2 class="section-title">Current Projects</h2>
-                <h3>Published</h3>
-                <p>Research contributions in spatial statistics, machine learning, and computational biology.</p>
-                <h3>Under Review</h3>
-                <p>Ongoing projects exploring the intersection of spatial transcriptomics and health equity.</p>
-            </section>
-            
-            <!-- Contact Section -->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-                <div class="contact__container bd-grid">
-                    <form action="#" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input" required>
-                        <input type="email" placeholder="Email" class="contact__input" required>
-                        <textarea placeholder="Message" class="contact__input" rows="5" required></textarea>
-                        <input type="submit" value="Send" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
+        <section id="publications" class="section">
+            <h2>Publications</h2>
+            <div>
+                <button class="btn btn-primary filter-btn" data-year="all">All</button>
+                <button class="btn btn-secondary filter-btn" data-year="2024">2024</button>
+                <button class="btn btn-secondary filter-btn" data-year="2023">2023</button>
+                <button class="btn btn-secondary filter-btn" data-year="2022">2022</button>
+                <button class="btn btn-secondary filter-btn" data-year="2021">2021</button>
+            </div>
+            <div class="pub-list">
+                <div class="pub-year">2024</div>
+                <div class="pub-item pub-2024">Gayawan, E. & Egbon, O. A. (2024). Bayesian multinomial model with inference based on Pólya-Gamma augmentation. <i>Biostatistics & Epidemiology</i>. <a href="https://doi.org/10.1080/24709360.2024.2398317">DOI</a></div>
+                <div class="pub-item pub-2024">Egbon, O. A., Heumann, C., Nascimento, D. C., & Louzada, F. (2024). Mixtures of Dirichlet processes for joint spatial modelling of transcranial magnetic stimulation mapping data. <i>Journal of the Royal Statistical Society Series C: Applied Statistics</i>. <a href="https://doi.org/10.1093/jrsssc/qlae042">DOI</a></div>
+                <div class="pub-item pub-2024">Egbon, O. A., Belachew, A. M., Bogoni, M. A., Babalola, B. T., & Louzada, F. (2024). Bayesian spatio-temporal statistical modeling of violent-related fatality in western and central Africa. <i>Spatial Statistics</i>, 60, 100828. <a href="https://doi.org/10.1016/j.spasta.2024.100828">DOI</a></div>
+                
+                <div class="pub-year">2023</div>
+                <div class="pub-item pub-2023">Gayawan, E. & Egbon, O. A. (2023). Spatio-temporal mapping of stunting and wasting in Nigerian children: A bivariate mixture modeling. <i>Spatial Statistics</i>. <a href="https://doi.org/10.1016/j.spasta.2023.100785">DOI</a></div>
+                <div class="pub-item pub-2023">Egbon, O. A., Nascimento, D., & Louzada, F. (2023). Prior elicitation for Gaussian spatial process: An application to TMS brain mapping. <i>Statistics in Medicine</i>. <a href="https://doi.org/10.1002/sim.9842">DOI</a></div>
+                
+                <div class="pub-year">2022</div>
+                <div class="pub-item pub-2022">Egbon, O. A., Bogoni, M. A., Babalola, B. T., & Louzada, F. (2022). Under age five children survival times in Nigeria: a Bayesian spatial modeling approach. <i>BMC Public Health</i>, 22(1). <a href="https://doi.org/10.1080/02664763.2022.2164561">DOI</a></div>
+                
+                <div class="pub-year">2021</div>
+                <div class="pub-item pub-2021">Louzada, F., Nascimento, D. C. D., & Egbon, O. A. (2021). Spatial Statistical Models: An Overview under the Bayesian Approach. <i>Axioms</i>, 10(4), 307. <a href="https://doi.org/10.3390/axioms10040307">DOI</a></div>
+            </div>
+        </section>
         
-        <!-- Footer -->
-        <footer class="footer">
-            <p class="footer__title">Osafu A. Egbon</p>
-            <p class="footer__copy">&copy; 2025 All rights reserved.</p>
-        </footer>
+        <section id="research" class="section">
+            <h2>Research</h2>
+            <p>Dr. Egbon's research focuses on developing analytical models for spatial transcriptomics, machine learning applications in biomedical science, and health disparities.</p>
+        </section>
         
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: osafu.egbon@example.com</p>
+        </section>
+    </div>
+</body>
 </html>
